@@ -4,16 +4,20 @@ import SignIn from "./pages/Signin";
 import SignOut from "./pages/Signout";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
+import Header from "./components/Header";
+import Contact from "./pages/Contact";
+ //Corrected the import
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Header /> {/* Use the Header component here */}
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/SignOut" element={<SignOut />} />
-        <Route path="/About" element={<About />} /> {/* Corrected this line */}
-        <Route path="/Profile" element={<Profile />} /> {/* Corrected this line */}
+        <Route path="/About" element={<About />} />
+        <Route path="/Profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
